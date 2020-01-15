@@ -1,7 +1,7 @@
 # DUT Info2 - FilmProvider
 
-### NOM : DOE
-### Prénom : John
+### NOM : Kane
+### Prénom : Demba-Elimane
 ### Groupe de TP : 
 - [x] 1
 
