@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <!ELEMENT librairie (en-tete, livre+)>
+        <!ELEMENT en-tete (texte, balise+)>
+        <!ELEMENT texte (#PCDATA)>
+        <!ELEMENT balise (strong | em | img)*>
+        <!ELEMENT strong (#PCDATA)>
+        <!ELEMENT em (#PCDATA)>
+        <!ELEMENT img (#PCDATA)>
+        <!ATTLIST img src  CDATA  #REQUIRED
+                     title CDATA  #IMPLIED >
+        <!ELEMENT livre (titre, auteur+,description, prix)>
+        <!ATTLIST livre ISBN             ID              #REQUIRED>
+        <!ELEMENT auteur (liste+,collectif)>
+        <!ELEMENT liste (auteur+,nom, prenom? )>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT prenom  (#PCDATA)>
+        <!ELEMENT collectif (direction, membre)>
+        <!ELEMENT direction (nom, prenom ?)>
+        <!ELEMENT membre (texte?)>
+        <!ELEMENT prix (#PCDATA)>
+        <!ATTLIST prix (euro| livre | dollard ), "euro">
+        <!ATTLIST type (TTC| HT), "HT">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
