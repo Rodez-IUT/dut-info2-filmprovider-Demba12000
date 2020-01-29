@@ -10,17 +10,19 @@
         <!ATTLIST img src  CDATA  #REQUIRED
                      title CDATA  #IMPLIED >
         <!ELEMENT livre (titre, auteur+,description, prix)>
-        <!ATTLIST livre ISBN             ID              #REQUIRED>
+        <!ATTLIST livre ISBN             NMTOKEN              #REQUIRED>
         <!ELEMENT auteur (liste+,collectif)>
         <!ELEMENT liste (auteur+,nom, prenom? )>
         <!ELEMENT nom (#PCDATA)>
         <!ELEMENT prenom  (#PCDATA)>
-        <!ELEMENT collectif (direction, membre)>
+        <!ELEMENT collectif (direction?, membre)>
         <!ELEMENT direction (nom, prenom ?)>
         <!ELEMENT membre (texte?)>
         <!ELEMENT prix (#PCDATA)>
         <!ATTLIST prix (euro| livre | dollard ), "euro">
         <!ATTLIST type (TTC| HT), "HT">
+
+        <!ENTITY copyright "&#169;Librairie &amp; Internet 2020">
 
 
 
