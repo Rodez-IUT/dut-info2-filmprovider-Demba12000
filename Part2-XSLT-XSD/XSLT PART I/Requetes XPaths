@@ -1,2 +1,5 @@
 /films/film/titre
 /films/film[titre='Minority Report']/resume/text
+/films/film[realisateur="position()=last()"]
+7) /films/film[realisateur="Scorcese"]/annee
+8) /films/film[annee='2003']
