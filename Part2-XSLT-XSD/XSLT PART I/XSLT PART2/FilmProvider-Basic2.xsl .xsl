@@ -4,9 +4,11 @@
     <html>
         <head><titre><xsl:value-of select="titre"></xsl:value-of></titre>
     </head>
-    <body>
+    <body baground color >
     <h1><xsl:value-of select="titre"/></h1>
-        <table> </table>
+        <table width="75%" border="1">
+
+        </table>
 
 
 
