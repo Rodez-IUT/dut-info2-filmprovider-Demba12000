@@ -18,6 +18,7 @@
     </xsl:template>
 
     <xsl:template match="film">
+        <xsl:variable name="idReal"><xsl:value-of select="attribute:: id_realisateur"/></xsl:variable>
         <tr>
             <td>
                 <xsl:value-of select="titre"/>
@@ -25,10 +26,8 @@
             <td>
                 <xsl:value-of select="resume"/>
             </td>
-            <td>
-                <p><xsl:value-of select="//realisateur/prenom"/> <xsl:value-of select="//realisateur/nom"/></p>
+                <h1><xsl:value-of select="//realisateur[@id_realisateur=$idReal]/prenom"/>&nbsp;<xsl:value-of select="//realisateur[@id_realisateur=$idReal]/nom"/></h1>
             </td>
         </tr>
-
     </xsl:template>
 </xsl:stylesheet>
