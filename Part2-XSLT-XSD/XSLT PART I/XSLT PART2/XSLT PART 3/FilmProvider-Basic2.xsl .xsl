@@ -26,7 +26,7 @@
             <td>
                 <xsl:value-of select="resume"/>
             </td>
-                <h1><xsl:value-of select="//realisateur[@id_realisateur=$idReal]/prenom"/>&nbsp;<xsl:value-of select="//realisateur[@id_realisateur=$idReal]/nom"/></h1>
+                <xsl:value-of select="//realisateur[@id_realisateur=$idReal]/prenom"/><xsl:text>  </xsl:text><xsl:value-of select="//realisateur[@id_realisateur=$idReal]/nom"/>
             </td>
         </tr>
     </xsl:template>
