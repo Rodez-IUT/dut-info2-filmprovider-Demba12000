@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?xml version="1.0" encoding="UTF-8"?>
+<xs:schema>
+<xs:element name="film">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="titre" type="xs:string"/>
+            <xs:element name="identifiant" type="xs:int"/>
+            <xs:element name="resumer" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
