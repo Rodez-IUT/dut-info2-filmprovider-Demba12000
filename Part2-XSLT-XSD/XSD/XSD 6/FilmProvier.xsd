@@ -41,5 +41,6 @@
         </xs:element>
         <xs:element name="texte"/>
     </xs:group>
+
     <xs:element name="texte" type="xs:string"/>
 </xs:schema>
