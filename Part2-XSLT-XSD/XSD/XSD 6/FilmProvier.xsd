@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-        <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema>
-<xs:element name="film">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="titre" type="xs:string"/>
-            <xs:element name="identifiant" type="xs:int"/>
-            <xs:element name="resumer" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="films">
+        <xs:complexType>
+            <xs:sequence >
+                <xs:element ref="realisateur"/>
+                <xs:element ref="film"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="film">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:attribute name="id_film" type="xs:string"/>
+                <xs:attribute name="id_realisateur" type="xs:string"/>
+                <xs:attribute name="annees" type="xs:int"/>
+
+                <xs:element name="titre" type="xs:string"/>
+                <xs:element name="resume">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:group ref="text-img"/>
+                            <xs:element ref="texte"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="realisateur">
+        <xs:complexType>
+            <xs:attribute name="id_realisateur" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="text-img">
+        <xs:element name="image">
+            <xs:complexType>
+                <xs:attribute name="source" type="xs:string"/>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="texte"/>
+    </xs:group>
+    <xs:element name="texte" type="xs:string"/>
 </xs:schema>
